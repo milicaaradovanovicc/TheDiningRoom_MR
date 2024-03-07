@@ -10,6 +10,9 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PaginationComponent {
   @Input() page: number = 1;
+  @Input() pageSize: number = 9;
+  @Input() collectionSize: number = 0;
+
   @Output() pageChange: EventEmitter<number> = new EventEmitter();
 
   onBtnClick(newPage: number) {
